@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <header><h1>Exercicios</h1</header><br>
+    <br>
+    <nav>
+        <a href atrib-nav="exercicios/modulo-financeiro.html">Acesso ao Modulo Financeiro</a><br>
+        <a href atrib-nav="exercicios/modulo-estoque.html">Acesso ao Modulo Estoque</a>
+    </nav>
+    <br>
+    <section id="conteudo"></section>
+    <footer>Rodape</footer>
+    <script>
+        const conteudo = document.getElementById("conteudo");    
+/*
+        document.querySelectorAll('a').forEach(link => {            
+            link.onclick = function(e) {
+                e.preventDefault();
+                //console.log("Chamando");
+                
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(htmml => conteudo.innerHTML = htmml)
+            }            
+        })
+*/
+        document.querySelectorAll('[atrib-nav]').forEach(link => {            
+            link.onclick = function(e) {
+                e.preventDefault();
+                console.log("Chamando");
+                
+                fetch(link.getAttribute('atrib-nav'))
+                    .then(resp => resp.text())
+                    .then(htmml => conteudo.innerHTML = htmml)
+            }            
+        })
+    </script>
+</body>
+</html>
