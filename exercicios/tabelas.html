@@ -1,6 +1,174 @@
-<table>
-    <caption>Clientes</caption>
-    <thead>
-
-    </thead>
+<table border="1">
+  <caption>
+    Clientes
+  </caption>
+  <thead>
+    Header da Tabela
+    <tr>
+      <th>Codigo</th>
+      <th>Nome</th>
+      <th>Endereco</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>JOAO DA SILVA</td>
+      <td>AV JOSE</td>
+      <td>98115-8091</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>MARIA DA SILVA</td>
+      <td>AV JOSE</td>
+      <td>98115-8091</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Total de Cliente</td>
+      <td>2</td>
+    </tr>
+  </tfoot>
 </table>
+
+<style>
+  /* Estilizando a tabela */
+  table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  }
+
+  /* Estilizando o cabeçalho da tabela */
+  th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  /* Estilizando as células da tabela */
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Estilizando as linhas ímpares */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  /* Estilizando as células quando passa o mouse por cima */
+  tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  /*
+    table {
+        border-collapse: collapse;
+    }
+    
+    
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+       border-bottom: solid 3px #444; 
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+ */
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="seu-arquivo-css.css" />
+    <title>Tabela de Clientes</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Cidade</th>
+          <th>Estado</th>
+          <th>País</th>
+          <th>Código Postal</th>
+          <th>Data de Cadastro</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+          <td>(123) 456-7890</td>
+          <td>New York</td>
+          <td>NY</td>
+          <td>USA</td>
+          <td>10001</td>
+          <td>2023-08-23</td>
+          <td>Ativo</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Johnson</td>
+          <td>mary@example.com</td>
+          <td>(234) 567-8901</td>
+          <td>Los Angeles</td>
+          <td>CA</td>
+          <td>USA</td>
+          <td>90001</td>
+          <td>2023-08-22</td>
+          <td>Ativo</td>
+        </tr>
+        <tr>
+          <td>Robert</td>
+          <td>Smith</td>
+          <td>robert@example.com</td>
+          <td>(345) 678-9012</td>
+          <td>Chicago</td>
+          <td>IL</td>
+          <td>USA</td>
+          <td>60601</td>
+          <td>2023-08-21</td>
+          <td>Inativo</td>
+        </tr>
+        <tr>
+          <td>Elizabeth</td>
+          <td>Williams</td>
+          <td>elizabeth@example.com</td>
+          <td>(456) 789-0123</td>
+          <td>Houston</td>
+          <td>TX</td>
+          <td>USA</td>
+          <td>77001</td>
+          <td>2023-08-20</td>
+          <td>Ativo</td>
+        </tr>
+        <!-- Adicione mais linhas conforme necessário -->
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cliente</title>
+    <style>
+      /* Estilizando o elemento <form> diretamente 
+       form {
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        */
+
+      /* Estilizando o formulário com uma classe personalizada 
+         .bordered-form {
+            border: 5px solid #ccc;
+            padding: 20px;
+        }
+        */
+
+      /* Estilizando o formulário com o id  */
+      #formCliente {
+        border: 2px solid #ccc;
+        padding: 20px;
+      }
+
+      .classificacao {
+        border: 2px solid #ccc;
+        padding: 20px;
+      }
+
+      .contato {
+        display: flex;
+        justify-content: center;
+      }
+
+      .contato input {
+        width: 48%;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="formCliente"
+      class="bordered-form"
+      action="http://localhost:3003/usuarios"
+      method="post"
+    >
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required /><br /><br />
+
+      <label for="sobrenome">Sobrenome:</label>
+      <input type="text" id="sobrenome" name="sobrenome" /><br /><br />
+
+      <fieldset class="contato">
+        <legend>Dados de Contato</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" /><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados de Endereço</legend>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" /><br /><br />
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" /><br /><br />
+
+        <label for="uf">Escolha uma UF:</label>
+        <select name="uf" id="uf">
+          <option value="">Selecione</option>
+          <option value="PA">PARÁ</option>
+          <option value="SP">SÃO PAULO</option>
+          <option value="RJ">RIO DE JANEIRO</option>
+          <option value="AC">ACRÉ</option>
+        </select>
+
+        <label for="produtos">Escolha os Produtos:</label>
+        <select name="produtos" multiple size="7">
+          <option value="alarme">Alarme</option>
+          <option value="cftv">CFTV</option>
+          <option value="rastreamentoCarr">Rastreamento Automovel</option>
+          <option value="rastreamentoMoto">Rastreamento Moto</option>
+        </select>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" /><br /><br />
+
+        <label for="codigo-postal">Código Postal:</label>
+        <input
+          type="text"
+          id="codigo-postal"
+          name="codigo-postal"
+        /><br /><br />
+      </fieldset>
+
+      <div class="classificacao">
+        <legend>Classificação</legend>
+        <input
+          type="radio"
+          name="classificacao"
+          id="nenhuma"
+          value="1"
+          placeholder="Nenhuma"
+        />Nenhuma
+        <input
+          type="radio"
+          name="classificacao"
+          id="Ouro"
+          value="2"
+          placeholder="Nenhuma1"
+        />Ouro
+        <input
+          type="radio"
+          name="classificacao"
+          id="Prata"
+          value="3"
+          placeholder="Nenhuma2"
+        />Prata
+        <input
+          type="radio"
+          name="classificacao"
+          id="Bronze"
+          value="4"
+          placeholder="Nenhuma3"
+        />Bronze
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          name="enviaSerasa"
+          id="enviaSerasa"
+          placeholder="Envia para o SERASA"
+        />Envia Serasa
+      </div>
+
+      <label for="data-cadastro">Data de Cadastro:</label>
+      <input type="date" id="data-cadastro" name="data-cadastro" /><br /><br />
+
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" /><br /><br />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" /><br /><br />
+
+      <label for="referenciaBancaria">Referências Bancárias:</label> <br />
+      <textarea
+        name="referenciaBancaria"
+        id="referenciaBancaria"
+        cols="50"
+        rows="10"
+      ></textarea
+      ><br />
+
+      <label for="frutas">Escolha suas frutas favoritas:</label>
+      <select id="frutas" name="frutas[]" multiple>
+        <option value="maca" selected>Maçã</option>
+        <option value="banana">Banana</option>
+        <option value="laranja" selected>Laranja</option>
+        <option value="uva">Uva</option>
+      </select>
+
+      <label for="cores">Escolha suas cores favoritas:</label>
+      <select id="cores" name="cores[]" multiple>
+        <option value="vermelho">Vermelho</option>
+        <option value="azul" selected>Azul</option>
+        <option value="verde">Verde</option>
+        <option value="amarelo" selected>Amarelo</option>
+      </select>
+
+      <label for="frutas">Escolha suas frutas favoritas:</label>
+      <select id="frutas" name="frutas" multiple>
+        <option value="maca">Maçã</option>
+        <option value="banana">Banana</option>
+        <option value="laranja">Laranja</option>
+        <option value="uva">Uva</option>
+      </select>
+
+      <p>Ou selecione suas frutas favoritas abaixo:</p>
+      <input type="checkbox" id="maca" name="frutas_checkbox[]" value="maca" />
+      <label for="maca">Maçã</label><br />
+
+      <input
+        type="checkbox"
+        id="banana"
+        name="frutas_checkbox[]"
+        value="banana"
+      />
+      <label for="banana">Banana</label><br />
+
+      <input
+        type="checkbox"
+        id="laranja"
+        name="frutas_checkbox[]"
+        value="laranja"
+      />
+      <label for="laranja">Laranja</label><br />
+
+      <input type="checkbox" id="uva" name="frutas_checkbox[]" value="uva" />
+      <label for="uva">Uva</label><br />
+
+      <input type="submit" value="Enviar" />
+      <button type="submit" formaction="http://localhost:3003/usuarios">
+        Incluir
+      </button>
+      <button type="submit" formaction="http://localhost:3003/usuarios/3">
+        Alterar
+      </button>
+    </form>
+  </body>
+</html>
