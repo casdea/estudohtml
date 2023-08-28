@@ -1,0 +1,71 @@
+<h1>IMAGENS</h1>
+
+<div class="quadro1">
+  <p>
+    <img
+      src="https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg"
+      alt="Tres Computadores"
+      title="Minha imagem tecnologica"
+    />
+  </p>
+
+    <img
+      src="https://cdn.pixabay.com/animation/2023/04/10/09/11/09-11-55-211_512.gif"
+      alt="Garota estudando"
+    />
+  </p>
+</div>
+
+<div>
+    <p class="circular">
+        <img src="https://cdn.pixabay.com/photo/2023/06/21/10/39/flower-8079026_640.png"
+        alt="Vazada"
+        align="right"
+    />
+    </p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque itaque, perspiciatis aperiam id aliquam est in corrupti animi dolor dolorum obcaecati qui repellendus! Dignissimos ex laudantium et sequi modi suscipit.
+</div>
+
+<style>
+    .quadro1 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Adiciona alinhamento vertical */
+        width: 100%;
+    }
+
+    .quadro1 p {
+        margin: 10px; /* Espaço entre as imagens */
+        border: 1px solid #ccc; /* Bosrda */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .quadro1 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .circular {
+        position: relative;
+        display: inline-block;
+    }
+
+    .circular::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor de sobreposição (aqui é preto com 50% de opacidade) */
+        border-radius: 50%; /* Faz com que a sobreposição seja circular */
+    }
+
+    .circular img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
